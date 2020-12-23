@@ -12,7 +12,12 @@ namespace BookSaller.DataAccess.Concrete.NHibernate
     {
         public void Add(Book book)
         {
-            throw new NotImplementedException();
+            //TODO
+        }
+
+        public void Delete(Book book)
+        {
+            //TODO
         }
 
         public List<Book> GetAll()
@@ -27,7 +32,7 @@ namespace BookSaller.DataAccess.Concrete.NHibernate
 
         public void Update(Book book)
         {
-            throw new NotImplementedException();
+            //TODO
         }
     }
 }

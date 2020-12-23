@@ -10,5 +10,6 @@ namespace BookSaller.Business.Abstract
     public interface IBookService
     {
         List<Book> GetAll();
+        void Add(Book book);
     }
 }

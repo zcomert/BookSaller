@@ -5,13 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BookSaller.DataAccess.Abstract
+namespace BookSaller.Business.Abstract
 {
-    public interface IBookDal : 
-        IEntityRepository<Book>
+    public interface IAuthorService
     {
+        List<Author> GetAll();
         
     }
-
-   
 }

@@ -9,23 +9,18 @@ using System.Threading.Tasks;
 
 namespace BookSaller.Business.Concrete
 {
-    public class BookManager : IBookService
+    public class AuthorManager : IAuthorService
     {
-        IBookDal _bookDal;
+        IAuthorDal _authorDal;
 
-        public BookManager(IBookDal bookDal)
+        public AuthorManager(IAuthorDal authorDal)
         {
-            _bookDal = bookDal;
+            _authorDal = authorDal;
         }
 
-        public void Add(Book book)
+        public List<Author> GetAll()
         {
-            _bookDal.Add(book);
-        }
-
-        public List<Book> GetAll()
-        {
-           return _bookDal.GetAll();
+           return _authorDal.GetAll();
         }
     }
 }

@@ -7,11 +7,9 @@ using System.Threading.Tasks;
 
 namespace BookSaller.DataAccess.Abstract
 {
-    public interface IBookDal : 
-        IEntityRepository<Book>
+    public interface IAuthorDal : 
+        IEntityRepository<Author>
     {
-        
+       
     }
-
-   
 }
