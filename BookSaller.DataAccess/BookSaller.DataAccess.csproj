@@ -56,12 +56,14 @@
     <Compile Include="Abstract\IBookDal.cs" />
     <Compile Include="Abstract\IEntityRepository.cs" />
     <Compile Include="Abstract\IPublisherDal.cs" />
+    <Compile Include="Abstract\IQueryableRepository.cs" />
     <Compile Include="Concrete\ADONET\AdoBookDal.cs" />
     <Compile Include="Concrete\ADONET\DBMS.cs" />
     <Compile Include="Concrete\EntityFramework\BookSallerContext.cs" />
     <Compile Include="Concrete\EntityFramework\EfAuthorDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfBookDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfPublisherDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfQueryableRepository.cs" />
     <Compile Include="Concrete\EntityFramework\EfRepositoryBase.cs" />
     <Compile Include="Concrete\NHibernate\NhBookDal.cs" />
     <Compile Include="Migrations\202012232109024_createDB.cs" />
