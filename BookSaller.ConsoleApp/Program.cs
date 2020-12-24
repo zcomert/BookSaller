@@ -11,6 +11,7 @@ using BookSaller.Entities.Concrete;
 using BookSaller.Business.DependencyResolvers.Ninject;
 using BookSaller.Business.Abstract;
 
+
 namespace BookSaller.ConsoleApp
 {
     class Program
@@ -36,7 +37,20 @@ namespace BookSaller.ConsoleApp
 
             var bookService = InstanceFactory.GetInstance<IBookService>();
             var bookList = bookService.GetAll();
+            
             bookList.ForEach(b => Console.WriteLine(b));
+
+            try
+            {
+                var book = new Book() { Id = 1, Title = "", UnitPrice = 0 };
+                bookService.Add(book);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+               
+            }
+           
 
             Console.ReadLine();
         }
