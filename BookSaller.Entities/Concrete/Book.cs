@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace BookSaller.Entities.Concrete
 {
 
-    public class Book : IEntity // Book bir tablo
+    public sealed class Book : IEntity // Book bir tablo
     {
         public int Id { get; set; }
         public string Title { get; set; }

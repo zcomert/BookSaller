@@ -1,4 +1,5 @@
-﻿using BookSaller.Entities.Concrete;
+﻿using BookSaller.DataAccess.Concrete.EntityFramework.Mapping;
+using BookSaller.Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -17,5 +18,11 @@ namespace BookSaller.DataAccess.Concrete.EntityFramework
         public DbSet<Book> Books { get; set; }
         public DbSet<Author> Authors { get; set; }
         public DbSet<Publisher> Publishers { get; set; }
+
+        // Mapping 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Configurations.Add(new BookMap());
+        }
     }
 }
