@@ -42,16 +42,15 @@ namespace BookSaller.ConsoleApp
 
             try
             {
-                var book = new Book() { Id = 1, Title = "", UnitPrice = 0 };
+                var book = new Book() { Id = 1, 
+                    Title = "Otitis media diagnosis", 
+                    UnitPrice = 5 };
                 bookService.Add(book);
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-               
             }
-           
-
             Console.ReadLine();
         }
     }

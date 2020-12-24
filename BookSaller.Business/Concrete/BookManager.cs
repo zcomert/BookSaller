@@ -1,4 +1,5 @@
 ﻿using BookSaller.Business.Abstract;
+using BookSaller.Business.Utilities;
 using BookSaller.Business.ValidationRules.FluentValidation;
 using BookSaller.DataAccess.Abstract;
 using BookSaller.Entities.Concrete;
@@ -22,20 +23,8 @@ namespace BookSaller.Business.Concrete
 
         public void Add(Book book)
         {
-            BookValidator bookValidator = new BookValidator();
-            ValidationResult results = bookValidator.Validate(book);
-            if (!results.IsValid)
-            {
-                foreach (var failure in results.Errors)
-                {
-                    Console.WriteLine($"Property {failure.PropertyName} failed validation." +
-                        $"Error was {failure.ErrorMessage}");
-                }
-            }
-            else
-            {
-                _bookDal.Add(book);
-            }
+            ValidationTool.Validate(new BookValidator(), book);
+            _bookDal.Add(book);
         }
 
         public List<Book> GetAll()
