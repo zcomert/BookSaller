@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using BookSaller.DataAccess.Concrete.NHibernate;
 using BookSaller.Entities.Concrete;
+using BookSaller.Business.DependencyResolvers.Ninject;
+using BookSaller.Business.Abstract;
 
 namespace BookSaller.ConsoleApp
 {
@@ -15,6 +17,8 @@ namespace BookSaller.ConsoleApp
     {
         static void Main(string[] args)
         {
+            #region IoC oncesi
+            /*
             var bookManager = new BookManager(new EfBookDal());
             var authorManager = new AuthorManager(new EfAuthorDal());
             var publisherManager = new PublisherManager(new EfPublisherDal());
@@ -27,6 +31,13 @@ namespace BookSaller.ConsoleApp
             bookManager.Add(book);
             
             bookManager.GetAll().ForEach(b => Console.WriteLine(b));
+            */
+            #endregion
+
+            var bookService = InstanceFactory.GetInstance<IBookService>();
+            var bookList = bookService.GetAll();
+            bookList.ForEach(b => Console.WriteLine(b));
+
             Console.ReadLine();
         }
     }
