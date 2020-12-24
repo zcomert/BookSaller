@@ -21,6 +21,8 @@ namespace BookSaller.Business.Concrete
             _bookDal = bookDal;
         }
 
+        /* ASPECT ORIENTED PROGRAMMING */
+        /* [ValidateTool(typeof(BookValidator))] */ 
         public void Add(Book book)
         {
             ValidationTool.Validate(new BookValidator(), book);
