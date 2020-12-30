@@ -1,10 +1,11 @@
-﻿using BookSaller.Entities.Concrete;
+﻿using BookSaller.DataAccess.Abstract;
+using BookSaller.Entities.Concrete;
 using System.Collections.Generic;
 
 namespace BookSaller.Business.Abstract
 {
-    public interface ICategoryService
+    public interface ICategoryService : IEntityRepository<Category>
     {
-        List<Category> GetAll();
+       
     }
 }

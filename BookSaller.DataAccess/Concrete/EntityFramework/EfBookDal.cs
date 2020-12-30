@@ -26,7 +26,7 @@ namespace BookSaller.DataAccess.Concrete.EntityFramework
             throw new NotImplementedException();
         }
 
-        public List<Book> GetAll()
+        public List<Book> GetAll(Expression<Func<Book, bool>> filter = null)
         {
             return new List<Book>()
             {
@@ -34,11 +34,6 @@ namespace BookSaller.DataAccess.Concrete.EntityFramework
                 new Book(){ Id=2, Title="EF ile Tasarım", UnitPrice=140},
                 new Book(){ Id=3, Title="EF Connections", UnitPrice=190}
             };
-        }
-
-        public List<Book> GetAll(Expression<Func<Book, bool>> filter = null)
-        {
-            throw new NotImplementedException();
         }
 
         public void Update(Book book)

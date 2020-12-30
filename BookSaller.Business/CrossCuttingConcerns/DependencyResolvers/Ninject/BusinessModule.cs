@@ -17,11 +17,8 @@ namespace BookSaller.Business.CrossCuttingConcerns.DependencyResolvers.Ninject
         {
             Bind<IBookService>().To<BookManager>().InSingletonScope();
             Bind<ICategoryService>().To<CategoryManager>().InSingletonScope();
-
-
             Bind<IBookDal>().To<EfBookDal>().InSingletonScope();
             Bind<ICategoryDal>().To<EfCategoryDal>().InSingletonScope();
-
         }
     }
 }
