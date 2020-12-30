@@ -20,7 +20,7 @@ namespace BookSaller.Business.CrossCuttingConcerns.DependencyResolvers.Ninject
 
 
             Bind<IBookDal>().To<EfBookDal>().InSingletonScope();
-            Bind<ICategoryDal>().To<EfCategoryDal>
+            Bind<ICategoryDal>().To<EfCategoryDal>().InSingletonScope();
 
         }
     }
