@@ -7,8 +7,7 @@ namespace BookSaller.Business.Concrete
 {
     public class CategoryManager : ICategoryService
     {
-        // DI
-        ICategoryDal _categoryDal;
+        private ICategoryDal _categoryDal;
 
         public CategoryManager(ICategoryDal categoryDal)
         {

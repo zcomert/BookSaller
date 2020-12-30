@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace BookSaller.Entities.Concrete
 {
+
     public class Book : IEntity // Book bir tablo
     {
         public int Id { get; set; }

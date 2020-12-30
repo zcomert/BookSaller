@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace BookSaller.Business.Abstract
 {
+
     public interface IBookService
     {
         List<Book> GetAll();

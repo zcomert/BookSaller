@@ -11,5 +11,6 @@ namespace BookSaller.Entities.Concrete
         {
             return $"{CategoryId,-5} {Title,-35}";
         }
+
     }
 }

@@ -42,9 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IBookDal.cs" />
+    <Compile Include="Abstract\ICategoryDal.cs" />
+    <Compile Include="Abstract\IEntityRepository.cs" />
     <Compile Include="Concrete\ADONET\AdoBookDal.cs" />
+    <Compile Include="Concrete\ADONET\AdoCategoryDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfBookDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfCategoryDal.cs" />
     <Compile Include="Concrete\NHibernate\NhBookDal.cs" />
+    <Compile Include="Concrete\NHibernate\NhCategoryDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

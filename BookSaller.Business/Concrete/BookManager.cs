@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace BookSaller.Business.Concrete
 {
+
     public class BookManager : IBookService
     {
         IBookDal _bookDal;
