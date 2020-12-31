@@ -24,8 +24,8 @@ namespace BookSaller.ConsoleApp
             var bookService = InstanceFactory.GetInstance<IBookService>();
             bookService.GetAll().ForEach(b => Console.WriteLine(b));
 
-            var categoryService = InstanceFactory.GetInstance<ICategoryService>();
-            categoryService.GetAll().ForEach(c => Console.WriteLine(c));
+            // var categoryService = InstanceFactory.GetInstance<ICategoryService>();
+            //categoryService.GetAll().ForEach(c => Console.WriteLine(c));
 
             Console.ReadLine();
         }
