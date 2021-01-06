@@ -1,5 +1,7 @@
 ﻿using BookSaller.DataAccess.Abstract;
+using BookSaller.DataAccess.Aspects;
 using BookSaller.Entities.Abstract;
+using BookSaller.Entities.Aspects.Postsharp;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -14,6 +16,7 @@ namespace BookSaller.DataAccess.Concrete.EntityFramework
         where Tentity : class, IEntity, new()
         where Tcontext : DbContext, new()
     {
+        
         public void Add(Tentity entity)
         {
             using (var context = new Tcontext())
@@ -31,7 +34,7 @@ namespace BookSaller.DataAccess.Concrete.EntityFramework
                 context.SaveChanges();
             }
         }
-
+        [LogAspect]
         public List<Tentity> GetAll()
         {
             using (var context = new Tcontext())

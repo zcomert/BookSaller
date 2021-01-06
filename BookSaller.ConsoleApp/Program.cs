@@ -44,7 +44,7 @@ namespace BookSaller.ConsoleApp
             {
                 var book = new Book() { Id = 1, 
                     Title = "Otitis media diagnosis", 
-                    UnitPrice = 5 };
+                    UnitPrice = 15 };
                 bookService.Add(book);
             }
             catch (Exception ex)

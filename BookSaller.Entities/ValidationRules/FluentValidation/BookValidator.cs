@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BookSaller.Business.ValidationRules.FluentValidation
+namespace BookSaller.Entities.ValidationRules.FluentValidation
 {
     public class BookValidator : AbstractValidator<Book>
     {

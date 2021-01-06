@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BookSaller.Business.Utilities
+namespace BookSaller.Entities.Utilities
 {
     public static class ValidationTool
     {
