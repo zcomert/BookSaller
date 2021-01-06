@@ -61,7 +61,6 @@
     <Compile Include="Abstract\IEntityRepository.cs" />
     <Compile Include="Abstract\IPublisherDal.cs" />
     <Compile Include="Abstract\IQueryableRepository.cs" />
-    <Compile Include="Aspects\LogAspectAttribute.cs" />
     <Compile Include="Concrete\ADONET\AdoBookDal.cs" />
     <Compile Include="Concrete\ADONET\DBMS.cs" />
     <Compile Include="Concrete\EntityFramework\BookSallerContext.cs" />

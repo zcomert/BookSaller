@@ -1,5 +1,4 @@
 ﻿using BookSaller.DataAccess.Abstract;
-using BookSaller.DataAccess.Aspects;
 using BookSaller.Entities.Abstract;
 using BookSaller.Entities.Aspects.Postsharp;
 using System;
@@ -34,7 +33,7 @@ namespace BookSaller.DataAccess.Concrete.EntityFramework
                 context.SaveChanges();
             }
         }
-        [LogAspect]
+        
         public List<Tentity> GetAll()
         {
             using (var context = new Tcontext())
